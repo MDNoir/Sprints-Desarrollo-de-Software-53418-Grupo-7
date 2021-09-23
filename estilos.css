@@ -1,3 +1,111 @@
-#irA_registro_usuario{
-    font-family: Courier, monospace; 
+#enviar_registro {
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	background-color:#89c403;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528009;
+    }
+#enviar_registro:hover {
+	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color:#77a809;
+    }
+#enviar_registro:active {
+	position:relative;
+	top:1px;
+    }
+
+#boton_registro_usuario {
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	background-color:#89c403;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528009;
+    }
+#boton_registro_usuario:hover {
+	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color:#77a809;
+    }
+#boton_registro_usuario:active {
+	position:relative;
+	top:1px;
+    }
+
+#body_formulario {
+    font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+    }
+
+.form_registro h2, .contact_form label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+.form_registro ul {
+    width: 750px;
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 0px;
+    padding: 0px;
+    }
+
+.form_registro li {
+    padding: 12px;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    position: relative;
+}
+
+.form_registro li:first-child, .form_registro li:last-child {
+    border-bottom: 1px solid #777;
+}
+
+.form_registro h2 {
+    margin: 0;
+    display: inline;
+}
+
+.Datos_Requeridos {
+    color: #d45252;
+    margin: 5px 0 0 0;
+    display: inline;
+    float: right;
+    font-size: 11px;
+}
+
+.form_registro label {
+    width: 150px;
+    margin-top: 3px;
+    display: inline-block;
+    float: left;
+    padding: 3px;
+}
+
+.form_registro input {
+    height: 20px;
+    width: 220px;
+    padding: 5px 8px;
+}
+
+.form_registro textarea {
+    padding: 8px;
+    width: 300px;
+}
+
+.form_registro button {
+    margin-left: 156px;
 }
