@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="estilos.css">
     <title>Registro Cliente</title>
 </head>
+
 <body class="form_registro" id="body_formulario" style="background-color:rgb(200, 233, 222);">
     <form id="form_nuevo_usuario">
         <div>
@@ -22,21 +24,23 @@
                 <li>
                     <label for="Edad">Edad:</label>
                     <input id="dato_edad_usuario" type="number" placeholder="Digite su edad">
-                    
+
                 </li>
                 <li>
                     <label for="Password">Contraseña:</label>
                     <input id="dato_contrasena" type="text" placeholder="Digite su contraseña">
-                    
+
                 </li>
-                
+
                 <li>
-                    <button id = "enviar_registro" type="button" style="float: center;">Registrarse!</button>
+                    <button id="enviar_registro" type="button" onclick="validar_nombre_usuario()"
+                        style="float: center;">Registrarse!</button>
                 </li>
             </ul>
         </div>
-        
+
     </form>
-        
+    <script src="validaciones.js"></script>
 </body>
+
 </html>
