@@ -45,7 +45,6 @@ function agregarRegistro(){
     let v3 = validar_contrasena();
 
     if (v1 == true && v2 == true && v3 == true){
-        window.alert("Datos validados correctamente");
         var reg = { 
             usuario: document.getElementById("dato_nombre_usuario").value,
             edad: document.getElementById("dato_edad_usuario").value,
@@ -53,15 +52,28 @@ function agregarRegistro(){
         }
 
         registros.push(reg)
-        console.log(reg)
-    }
-    else{
-        window.alert("Datos inválidos");
+        
     }
 }
 
 function OrdenarArreglo(){
+    // Función comparativa para ordenar los elementos del objeto de registro
+    registros.sort(function (a, b) {
+        if (a.edad > b.edad) {
+            return 1;
+        }
+        if (b.edad > a.edad) {
+            return -1;
+        }
+        return 0;
+    });
 
+    console.log(registros);
+}
+
+function prueba(){
+    agregarRegistro()
+    OrdenarArreglo()
 }
 
 module.exports.registros = registros;
