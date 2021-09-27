@@ -36,6 +36,14 @@ function validar_contrasena(string) {
     }
 }
 
+function validar_todo(){
+    validar_nombre_usuario();
+    validar_edad_usuario();
+    validar_contrasena();
+}
+
+
+
 
 module.exports.validar_nombre_usuario = validar_nombre_usuario;
 module.exports.validar_edad_usuario = validar_edad_usuario;
