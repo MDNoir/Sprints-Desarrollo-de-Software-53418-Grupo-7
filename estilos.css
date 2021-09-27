@@ -1,111 +1,99 @@
-#enviar_registro {
-	box-shadow:inset 0px 1px 0px 0px #a4e271;
-	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
-	background-color:#89c403;
-	border-radius:6px;
-	border:1px solid #74b807;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #528009;
-    }
-#enviar_registro:hover {
-	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
-	background-color:#77a809;
-    }
-#enviar_registro:active {
-	position:relative;
-	top:1px;
-    }
-
-#boton_registro_usuario {
-	box-shadow:inset 0px 1px 0px 0px #a4e271;
-	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
-	background-color:#89c403;
-	border-radius:6px;
-	border:1px solid #74b807;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #528009;
-    }
-#boton_registro_usuario:hover {
-	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
-	background-color:#77a809;
-    }
-#boton_registro_usuario:active {
-	position:relative;
-	top:1px;
-    }
-
-#body_formulario {
-    font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-    }
-
-.form_registro h2, .contact_form label {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-.form_registro ul {
-    width: 750px;
-    list-style-type: none;
-    list-style-position: outside;
-    margin: 0px;
-    padding: 0px;
-    }
-
-.form_registro li {
-    padding: 12px;
-    border-bottom: 1px solid rgb(197, 197, 197);
-    position: relative;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.form_registro li:first-child, .form_registro li:last-child {
-    border-bottom: 1px solid #777;
+body {
+  background-image: url('fondo.png');
+}
+
+.form_registro {
+  width: 400px;
+  padding: 30px;
+  background: #d9f7eb;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 10px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
 }
 
 .form_registro h2 {
-    margin: 0;
-    display: inline;
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: rgb(30, 56, 87);
+  margin-left: 60px;
 }
 
-.Datos_Requeridos {
-    color: #d45252;
-    margin: 5px 0 0 0;
-    display: inline;
-    float: right;
-    font-size: 11px;
+.form_registro h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: rgb(30, 56, 87);
+  font-weight: bolder;
 }
 
-.form_registro label {
-    width: 150px;
-    margin-top: 3px;
-    display: inline-block;
-    float: left;
-    padding: 3px;
+.controls {
+  width: 100%;
+  background: #124630;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #21f1f8;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
 }
 
-.form_registro input {
-    height: 20px;
-    width: 220px;
-    padding: 5px 8px;
+.form_registro p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
 }
 
-.form_registro textarea {
-    padding: 8px;
-    width: 300px;
+.form_registro a {
+  color: white;
+  text-decoration: none;
 }
 
-.form_registro button {
-    margin-left: 156px;
+.form_registro a:hover {
+  color: white;
+  text-decoration: underline;
 }
+
+.form_registro .botons {
+  width: 60%;
+  background: #edfcff;
+  background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+  background: -webkit-linear-gradient(top, #89c403 #77a809 100%);
+  border: 1px solid #74b807;
+  padding: 12px;
+  color: white;
+  margin: 16px;
+  font-size: 22px;
+  margin-left: 70px;
+  border-radius: 20px;
+  font-family: 'calibri';
+  box-shadow: 3px 2px 2px rgb(122, 120, 120);
+
+}
+
+.botons {
+  width: 80%;
+  background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+  background: -webkit-linear-gradient(top, #89c403 #77a809 100%);
+  border: 1px solid #74b807;
+  padding: 2px;
+  margin: -5px;
+  margin-top: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-family: 'calibri';
+  box-shadow: 3px 2px 2px rgb(122, 120, 120);
+
+}
+
+
+
