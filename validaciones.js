@@ -71,10 +71,12 @@ function OrdenarArreglo(){
     console.log(registros);
 }
 
+/*
 function prueba(){
     agregarRegistro()
     OrdenarArreglo()
 }
+*/
 
 module.exports.registros = registros;
 module.exports.agregarRegistro = agregarRegistro;
