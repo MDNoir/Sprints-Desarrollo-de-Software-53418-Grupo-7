@@ -37,12 +37,17 @@ function validar_contrasena(string) {
 }
 
 function validar_todo(){
-    validar_nombre_usuario();
-    validar_edad_usuario();
-    validar_contrasena();
+    let v1 = validar_nombre_usuario();
+    let v2 = validar_edad_usuario();
+    let v3 = validar_contrasena();
+
+    if (v1 == true && v2 == true && v3 == true){
+        window.alert("Datos validados correctamente");
+    }
+    else{
+        window.alert("Datos inválidos");
+    }
 }
-
-
 
 
 module.exports.validar_nombre_usuario = validar_nombre_usuario;
