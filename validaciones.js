@@ -1,5 +1,5 @@
 // Definiendo el array global
-var registroGlobal = [];
+let registros = [];
 
 function validar_nombre_usuario(string) {
     var x = document.getElementById("dato_nombre_usuario").value;
@@ -46,20 +46,24 @@ function agregarRegistro(){
 
     if (v1 == true && v2 == true && v3 == true){
         window.alert("Datos validados correctamente");
-        var registro = []
-        registro[0] = document.getElementById("dato_nombre_usuario").value;
-        registro[1] = document.getElementById("dato_edad_usuario").value;
-        registro[2] = document.getElementById("dato_contrasena").value;
+        var reg = { 
+            usuario: document.getElementById("dato_nombre_usuario").value,
+            edad: document.getElementById("dato_edad_usuario").value,
+            contrasena: document.getElementById("dato_contrasena").value
+        }
 
-        registroGlobal.push(registro)
-        console.log(registro)
+        registros.push(reg)
+        console.log(reg)
     }
     else{
         window.alert("Datos inválidos");
     }
 }
 
+function OrdenarArreglo(){
 
-module.exports.validar_nombre_usuario = validar_nombre_usuario;
-module.exports.validar_edad_usuario = validar_edad_usuario;
-module.exports.validar_contrasena = validar_contrasena;
+}
+
+module.exports.registros = registros;
+module.exports.agregarRegistro = agregarRegistro;
+module.exports.OrdenarArreglo = OrdenarArreglo;
