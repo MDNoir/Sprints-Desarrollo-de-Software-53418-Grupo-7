@@ -1,3 +1,6 @@
+// Definiendo el array global
+let registros = [];
+
 function validar_nombre_usuario(string) {
     var x = document.getElementById("dato_nombre_usuario").value;
     var re_nom = new RegExp("^([A-Z]{1,}[a-z]*?)(\\s[A-Z]{1,}[a-z]*?)?(\\s[A-Z]{1,}[a-z]*?)?(\\s[A-Z]{1,}[a-z]*?)?$");
@@ -36,7 +39,46 @@ function validar_contrasena(string) {
     }
 }
 
+function agregarRegistro(){
+    let v1 = validar_nombre_usuario();
+    let v2 = validar_edad_usuario();
+    let v3 = validar_contrasena();
 
-module.exports.validar_nombre_usuario = validar_nombre_usuario;
-module.exports.validar_edad_usuario = validar_edad_usuario;
-module.exports.validar_contrasena = validar_contrasena;
+    if (v1 == true && v2 == true && v3 == true){
+        var reg = { 
+            usuario: document.getElementById("dato_nombre_usuario").value,
+            edad: document.getElementById("dato_edad_usuario").value,
+            contrasena: document.getElementById("dato_contrasena").value
+        }
+
+        registros.push(reg)
+        
+    }
+}
+
+function OrdenarArreglo(){
+    // Función comparativa para ordenar los elementos del objeto de registro
+    registros.sort(function (a, b) {
+        if (a.edad > b.edad) {
+            return 1;
+        }
+        if (b.edad > a.edad) {
+            return -1;
+        }
+        return 0;
+    });
+
+    console.log(registros);
+    return registros
+}
+
+/*
+function prueba(){
+    agregarRegistro()
+    OrdenarArreglo()
+}
+*/
+
+module.exports.registros = registros;
+module.exports.agregarRegistro = agregarRegistro;
+module.exports.OrdenarArreglo = OrdenarArreglo;
