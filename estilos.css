@@ -95,5 +95,10 @@ body {
 
 }
 
+.botons:hover {
+	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color:#77a809;
+}
+
 
 
