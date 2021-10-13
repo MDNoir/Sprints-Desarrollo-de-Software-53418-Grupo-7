@@ -12,15 +12,15 @@
 <body>
     <form class="form_registro" id="form_login">
         <h2>Inicio de Sesión</h2>
-        <h4>Nombre:</h4>
+        <h4>Usuario:</h4>
         <input class="controls" type="text" name="nombre" id="in_login_username"
-            placeholder="Ingrese su nombre completo">
-        <h4>Captcha:</h4>
-        <input class="controls" type="text" name="captcha" id="in_login_captcha" placeholder="Ingrese su edad">
+            placeholder="Ingrese su usuario">
         <h4>Contraseña:</h4>
         <input class="controls" type="password" name="contrasena" id="in_login_contrasena"
             placeholder="Ingrese su contraseña">
-        <button id="enviar_registro" class=botons type="button" onclick="" style="float: center;">¡Registrarse!</button>
+        <h4>¿Cuál es la capital de Colombia?</h4>
+        <input class="controls" type="text" name="captcha" id="in_login_captcha" placeholder="Ingrese captcha">
+        <button id="enviar_login" class=botons type="button" onclick="test()" style="float: center;">¡Registrarse!</button>
     </form>
     <script src="login.js"></script>
 </body>
