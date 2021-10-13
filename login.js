@@ -1,15 +1,3 @@
-let registros = [];
-
-/*
-
-var reg = { 
-    usuario: "mdoc",
-    edad: "25",
-    contrasena: "suanfonzon"
-}
-
-registros.push(reg)
-*/
 
 function validar_captcha(recaptcha){
     var x = document.getElementById("in_login_captcha").value;
@@ -29,7 +17,7 @@ function iniciar_sesion(user, contra, recaptcha){
     var z = document.getElementById("in_login_contrasena").value;
     var w = validar_captcha();
     for (var i = 0; i < registros.length; i++) {
-        if (y == registros[i].usuario && z == registros[i].contrasena){
+        if (y == validaciones.registros[i].usuario && z == validaciones.registros[i].contrasena){
             return true;
         }
         else{
@@ -37,16 +25,4 @@ function iniciar_sesion(user, contra, recaptcha){
         }
     }
 }
-
-/*
-function test(){
-    validar_captcha();
-    iniciar_sesion();
-}
-*/
-
-module.exports.registros = registros;
-module.exports.validar_captcha = validar_captcha;
-module.exports.iniciar_sesion = iniciar_sesion;
-
 

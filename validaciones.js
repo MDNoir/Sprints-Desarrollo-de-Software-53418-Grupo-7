@@ -72,13 +72,8 @@ function OrdenarArreglo(){
     return registros
 }
 
-/*
+
 function prueba(){
     agregarRegistro()
     OrdenarArreglo()
 }
-*/
-
-module.exports.registros = registros;
-module.exports.agregarRegistro = agregarRegistro;
-module.exports.OrdenarArreglo = OrdenarArreglo;
