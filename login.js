@@ -1,10 +1,9 @@
 
 
 function validar_captcha(recaptcha){
-    var x = document.getElementById("in_login_captcha").value;
+    var x = document.getElementById(recaptcha).value;
     var re_cap = new RegExp("^[Bb][Oo][Gg][Oo][Tt][AÁaá]$");
     if (re_cap.test(x) == true) {
-        console.log("eres humano");
         return true;
     }
     else {
@@ -13,11 +12,11 @@ function validar_captcha(recaptcha){
 }
 
 
-function iniciar_sesion(user, contra, recaptcha){
+function iniciar_sesion(user, contra, recap){
     
-    var y = document.getElementById("in_login_username").value;
-    var z = document.getElementById("in_login_contrasena").value;
-    var w = validar_captcha();
+    var y = document.getElementById(user).value;
+    var z = document.getElementById(contra).value;
+    var w = validar_captcha(recap);
     for (var i = 0; i < registros.length; i++) {
         if (y == validaciones.registros[i].usuario && z == validaciones.registros[i].contrasena){
             console.log("sesion iniciada");
@@ -30,7 +29,7 @@ function iniciar_sesion(user, contra, recaptcha){
     }
 }
 
-function test(){
-    validar_captcha()
-    iniciar_sesion()
+function test(us, con, cap){
+    validar_captcha(cap);
+    iniciar_sesion(us, con, cap);
 }

@@ -2,7 +2,7 @@
 var registros = [];
 
 function validar_nombre_usuario(string) {
-    var x = document.getElementById("dato_nombre_usuario").value;
+    var x = document.getElementById(string).value;
     var re_nom = new RegExp("^([A-Z]{1,}[a-z]*?)(\\s[A-Z]{1,}[a-z]*?)?(\\s[A-Z]{1,}[a-z]*?)?(\\s[A-Z]{1,}[a-z]*?)?$");
     if (re_nom.test(x) == true) {
         return true;
@@ -13,7 +13,7 @@ function validar_nombre_usuario(string) {
 }
 
 function validar_edad_usuario(edad) {
-    var y = parseInt(document.getElementById("dato_edad_usuario").value);
+    var y = parseInt(document.getElementById(edad).value);
     if(typeof(y) == 'number'){
         if (y >= 13 && y < 110 ) {
             return true;
@@ -29,7 +29,7 @@ function validar_edad_usuario(edad) {
 }
 
 function validar_contrasena(string) {
-    var z = document.getElementById("dato_contrasena").value;
+    var z = document.getElementById(string).value;
     var re_con = new RegExp("^[a-zA-Z0-9]{6,}$");
     if (re_con.test(z) == true) {
         return true;
@@ -39,16 +39,16 @@ function validar_contrasena(string) {
     }
 }
 
-function agregarRegistro(){
-    let v1 = validar_nombre_usuario();
-    let v2 = validar_edad_usuario();
-    let v3 = validar_contrasena();
+function agregarRegistro(d_nom, d_edad, d_contra){
+    let v1 = validar_nombre_usuario(d_nom);
+    let v2 = validar_edad_usuario(d_edad);
+    let v3 = validar_contrasena(d_contra);
 
     if (v1 == true && v2 == true && v3 == true){
         var reg = { 
-            usuario: document.getElementById("dato_nombre_usuario").value,
-            edad: document.getElementById("dato_edad_usuario").value,
-            contrasena: document.getElementById("dato_contrasena").value
+            usuario: document.getElementById(d_nom).value,
+            edad: document.getElementById(d_edad).value,
+            contrasena: document.getElementById(d_contra).value
         }
 
         registros.push(reg)
@@ -73,7 +73,7 @@ function OrdenarArreglo(){
 }
 
 
-function prueba(){
-    agregarRegistro()
+function prueba(datoNom, datoEdad, datoContr){
+    agregarRegistro(datoNom, datoEdad, datoContr)
     OrdenarArreglo()
 }
