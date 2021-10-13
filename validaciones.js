@@ -1,5 +1,5 @@
 // Definiendo el array global
-let registros = [];
+var registros = [];
 
 function validar_nombre_usuario(string) {
     var x = document.getElementById("dato_nombre_usuario").value;
