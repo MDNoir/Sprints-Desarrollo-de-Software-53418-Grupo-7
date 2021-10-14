@@ -7,10 +7,18 @@ password: "",
 database: "manguito"
 });
 
+/*
+var reg = { 
+    usuario: "noirock",
+    edad: 25,
+    contrasena: "suanfonzon"
+}
+*/
+
 con.connect(function(err){
     if (err) throw err;
     console.log("Connected!");
-    var sql = "SELECT * FROM usuarios";
+    var sql = "INSERT INTO usuarios (usuario, edad, contrasena) VALUES ('"+reg.usuario+"', '"+reg.edad+"', '"+reg.contrasena+"')";
     con.query(sql, function(err, result, fields){
         if (err) throw err;
         console.log(result);
