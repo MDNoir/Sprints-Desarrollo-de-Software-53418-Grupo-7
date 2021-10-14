@@ -29,7 +29,7 @@ function iniciar_sesion(user, contra, recaptcha){
     var z = document.getElementById("in_login_contrasena").value;
     var w = validar_captcha();
     for (var i = 0; i < registros.length; i++) {
-        if (y == registros[i].usuario && z == registros[i].contrasena){
+        if (y == registros[i].usuario && z == registros[i].contrasena && w == true){
             return true;
         }
         else{
