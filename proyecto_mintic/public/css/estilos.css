@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('fondo.png');
+}
+
+.form_registro {
+  width: 400px;
+  padding: 30px;
+  background: #d9f7eb;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 10px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form_registro h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: rgb(30, 56, 87);
+  margin-left: 60px;
+}
+
+.form_registro h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: rgb(30, 56, 87);
+  font-weight: bolder;
+}
+
+.controls {
+  width: 100%;
+  background: #124630;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #21f1f8;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
+}
+
+.form_registro p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form_registro a {
+  color: white;
+  text-decoration: none;
+}
+
+.form_registro a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form_registro .botons {
+  width: 60%;
+  background: #edfcff;
+  background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+  background: -webkit-linear-gradient(top, #89c403 #77a809 100%);
+  border: 1px solid #74b807;
+  padding: 12px;
+  color: white;
+  margin: 16px;
+  font-size: 22px;
+  margin-left: 70px;
+  border-radius: 20px;
+  font-family: 'calibri';
+  box-shadow: 3px 2px 2px rgb(122, 120, 120);
+
+}
+
+.botons {
+  width: 80%;
+  background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+  background: -webkit-linear-gradient(top, #89c403 #77a809 100%);
+  border: 1px solid #74b807;
+  padding: 2px;
+  margin: -5px;
+  margin-top: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-family: 'calibri';
+  box-shadow: 3px 2px 2px rgb(122, 120, 120);
+
+}
+
+.botons:hover {
+	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color:#77a809;
+}
+
+
+
