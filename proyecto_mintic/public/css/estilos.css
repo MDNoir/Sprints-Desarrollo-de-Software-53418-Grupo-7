@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url('images/fondo.png');
+  background-image: url('../images/fondo.png');
 }
 
 .form_registro {
