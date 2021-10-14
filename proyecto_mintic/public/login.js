@@ -18,7 +18,7 @@ function iniciar_sesion(user, contra, recap){
     var z = document.getElementById(contra).value;
     var w = validar_captcha(recap);
     for (var i = 0; i < registros.length; i++) {
-        if (y == validaciones.registros[i].usuario && z == validaciones.registros[i].contrasena){
+        if (y == validaciones.registros[i].usuario && z == validaciones.registros[i].contrasena && w == true){
             console.log("sesion iniciada");
             return true;
         }
