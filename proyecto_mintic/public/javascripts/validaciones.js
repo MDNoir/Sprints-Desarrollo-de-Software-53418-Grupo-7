@@ -3,7 +3,7 @@ var registros = [];
 
 function validar_nombre_usuario(string) {
     var x = document.getElementById(string).value;
-    var re_nom = new RegExp("^[a-zA-Z0-9]{8,16}$");
+    var re_nom = new RegExp("^[a-zA-Z0-9]{4,16}$");
     if (re_nom.test(x) == true) {
         return true;
     }

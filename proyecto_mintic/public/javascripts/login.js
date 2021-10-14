@@ -1,5 +1,4 @@
 
-
 function validar_captcha(recaptcha){
     var x = document.getElementById(recaptcha).value;
     var re_cap = new RegExp("^[Bb][Oo][Gg][Oo][Tt][AÁaá]$");
@@ -11,14 +10,13 @@ function validar_captcha(recaptcha){
     }
 }
 
-
 function iniciar_sesion(user, contra, recap){
     
     var y = document.getElementById(user).value;
     var z = document.getElementById(contra).value;
     var w = validar_captcha(recap);
     for (var i = 0; i < registros.length; i++) {
-        if (y == validaciones.registros[i].usuario && z == validaciones.registros[i].contrasena && w == true){
+        if (y == registros[i].usuario && z == registros[i].contrasena && w == true){
             console.log("sesion iniciada");
             return true;
         }
@@ -30,6 +28,7 @@ function iniciar_sesion(user, contra, recap){
 }
 
 function test(us, con, cap){
+    console.log(registros);
     validar_captcha(cap);
     iniciar_sesion(us, con, cap);
 }
