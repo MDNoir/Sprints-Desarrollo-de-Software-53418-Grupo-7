@@ -40,12 +40,12 @@ function iniciar_sesion(user, contra, recap){
 }
 
 
-/*
-function test(){
-    validar_captcha();
-    iniciar_sesion();
+
+function test(d_us, d_cont, d_cap){
+    validar_captcha(d_cap);
+    iniciar_sesion(d_us, d_cont, d_cap);
 }
-*/
+
 
 module.exports.registros = registros;
 module.exports.validar_captcha = validar_captcha;
