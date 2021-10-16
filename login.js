@@ -84,23 +84,28 @@ function validar_captcha(rcaptcha){
 
 function iniciar_sesion(usuario, contrasena, rcaptcha){
     
-    var y = document.getElementById(usuario).value;
-    var z = document.getElementById(contrasena).value;
-    
-    for (var i = 0; i < registros.length; i++) {
-        if (y == registros[i].usuario && z == registros[i].contrasena){
-            var w = validar_captcha(rcaptcha);
-            if (w == true){
-                return true;
+    var y = document.getElementById('in_login_username').value;
+    var z = document.getElementById('in_login_password').value;
+    if (y != null && z != null){
+        for (var i = 0; i < registros.length; i++) {
+            if (y == registros[i].usuario && z == registros[i].contrasena){
+                var w = validar_captcha('in_login_captcha');
+                if (w == true){
+                    return true;
+                }
+                else{
+                    return false;
+                }
             }
             else{
-                return false;
+                return false; 
             }
         }
-        else{
-            return false; 
-        }
     }
+    else{
+        return false;
+    }
+
 }
 
 
