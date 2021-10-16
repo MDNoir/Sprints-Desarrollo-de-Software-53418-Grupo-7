@@ -55,26 +55,9 @@ function agregarRegistro(usuario, edad, contrasena){
     }
 }
 
-function OrdenarArreglo(){
-    // Función comparativa para ordenar los elementos del objeto de registro
-    registros.sort(function (a, b) {
-        if (a.edad > b.edad) {
-            return 1;
-        }
-        if (b.edad > a.edad) {
-            return -1;
-        }
-        return 0;
-    });
-
-    console.log(registros);
-    return registros
-}
-
 function validar_captcha(rcaptcha){
-    var x = document.getElementById(rcaptcha).value;
     var re_cap = new RegExp("^[Bb][Oo][Gg][Oo][Tt][AÁaá]$");
-    if (re_cap.test(x) == true) {
+    if (re_cap.test(rcaptcha) == true) {
         return true;
     }
     else {
@@ -84,35 +67,24 @@ function validar_captcha(rcaptcha){
 
 function iniciar_sesion(usuario, contrasena, rcaptcha){
     
-    var y = document.getElementById('in_login_username').value;
-    var z = document.getElementById('in_login_password').value;
-    if (y != null && z != null){
-        for (var i = 0; i < registros.length; i++) {
-            if (y == registros[i].usuario && z == registros[i].contrasena){
-                var w = validar_captcha('in_login_captcha');
-                if (w == true){
-                    return true;
-                }
-                else{
-                    return false;
-                }
+    for (var i = 0; i < registros.length - 1; i++) {
+        if (usuario == registros[i].usuario && contrasena == registros[i].contrasena){
+            var w = validar_captcha(rcaptcha);
+            if (w == true){
+                return true;
             }
             else{
-                return false; 
+                return false;
             }
         }
+        else{
+            return false; 
+        }
     }
-    else{
-        return false;
-    }
-
 }
-
-
 
 module.exports.registros = registros;
 module.exports.agregarRegistro = agregarRegistro;
-module.exports.OrdenarArreglo = OrdenarArreglo;
 module.exports.validar_captcha = validar_captcha;
 module.exports.iniciar_sesion = iniciar_sesion;
 
