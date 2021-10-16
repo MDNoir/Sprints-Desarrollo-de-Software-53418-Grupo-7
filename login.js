@@ -1,7 +1,7 @@
 let registros = [];
 
 function validar_nombre_usuario(string) {
-    var x = document.getElementById("dato_nombre_usuario").value;
+    var x = document.getElementById(string).value;
     var re_nom = new RegExp("^([A-Z]{1,}[a-z]*?)(\\s[A-Z]{1,}[a-z]*?)?(\\s[A-Z]{1,}[a-z]*?)?(\\s[A-Z]{1,}[a-z]*?)?$");
     if (re_nom.test(x) == true) {
         return true;
@@ -12,7 +12,7 @@ function validar_nombre_usuario(string) {
 }
 
 function validar_edad_usuario(edad) {
-    var y = parseInt(document.getElementById("dato_edad_usuario").value);
+    var y = parseInt(document.getElementById(edad).value);
     if(typeof(y) == 'number'){
         if (y >= 13 && y < 110 ) {
             return true;
@@ -28,7 +28,7 @@ function validar_edad_usuario(edad) {
 }
 
 function validar_contrasena(string) {
-    var z = document.getElementById("dato_contrasena").value;
+    var z = document.getElementById(string).value;
     var re_con = new RegExp("^[a-zA-Z0-9]{6,}$");
     if (re_con.test(z) == true) {
         return true;
@@ -38,16 +38,16 @@ function validar_contrasena(string) {
     }
 }
 
-function agregarRegistro(){
+function agregarRegistro(usuario, edad, contrasena){
     let v1 = validar_nombre_usuario();
     let v2 = validar_edad_usuario();
     let v3 = validar_contrasena();
 
     if (v1 == true && v2 == true && v3 == true){
         var reg = { 
-            usuario: document.getElementById("dato_nombre_usuario").value,
-            edad: document.getElementById("dato_edad_usuario").value,
-            contrasena: document.getElementById("dato_contrasena").value
+            usuario: document.getElementById(usuario).value,
+            edad: document.getElementById(edad).value,
+            contrasena: document.getElementById(contrasena).value
         }
 
         registros.push(reg)
@@ -71,8 +71,8 @@ function OrdenarArreglo(){
     return registros
 }
 
-function validar_captcha(recaptcha){
-    var x = document.getElementById(recaptcha).value;
+function validar_captcha(rcaptcha){
+    var x = document.getElementById(rcaptcha).value;
     var re_cap = new RegExp("^[Bb][Oo][Gg][Oo][Tt][AÁaá]$");
     if (re_cap.test(x) == true) {
         return true;
@@ -86,14 +86,18 @@ function iniciar_sesion(usuario, contrasena, rcaptcha){
     
     var y = document.getElementById(usuario).value;
     var z = document.getElementById(contrasena).value;
-    var w = validar_captcha(rcaptcha);
+    
     for (var i = 0; i < registros.length; i++) {
-        if (y == registros[i].usuario && z == registros[i].contrasena && w == true){
-            console.log("sesion iniciada");
-            return true;
+        if (y == registros[i].usuario && z == registros[i].contrasena){
+            var w = validar_captcha(rcaptcha);
+            if (w == true){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
         else{
-            console.log("error");
             return false; 
         }
     }
